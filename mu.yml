@@ -1,7 +1,9 @@
 environments:
 - name: acceptance
 - name: production
+
 service:
+  name: web
   port: 80
   healthEndPoint: /
   pathPatterns:
@@ -10,7 +12,9 @@ service:
     source:
       provider: GitHub
       repo: jlchenwenbo/mu-app
+
 service:
+  name: worker
   port: 80
   healthEndPoint: /
   pathPatterns:
