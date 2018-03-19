@@ -10,3 +10,12 @@ service:
     source:
       provider: GitHub
       repo: jlchenwenbo/mu-app
+service:
+  port: 80
+  healthEndPoint: /
+  pathPatterns:
+  - /*
+  pipeline:
+    source:
+      provider: GitHub
+      repo: jlchenwenbo/mu-app
